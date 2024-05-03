@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Arngren</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!--
+      Need a visual blank slate?
+      Remove all code in `styles.css`!
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <nav id="header-nav">
+        <a href="/" aria-current="page"><strong id="logo">Arngren</strong></a>
+        <search>
+          <form>
+            <label for="product" aria-hidden="true">Search for a product</label>
+            <input
+              type="search"
+              id="product"
+              name="q"
+              aria-label="Search for a product"
+              placeholder="Search for a product..."
+            />
+            <button type="submit" aria-label="search">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                x="0px"
+                y="0px"
+                width="16"
+                height="16"
+                viewBox="0,0,256,256"
+              >
+                <g
+                  fill="#ffffff"
+                  fill-rule="nonzero"
+                  stroke="none"
+                  stroke-width="1"
+                  stroke-linecap="butt"
+                  stroke-linejoin="miter"
+                  stroke-miterlimit="10"
+                  stroke-dasharray=""
+                  stroke-dashoffset="0"
+                  font-family="none"
+                  font-weight="none"
+                  font-size="none"
+                  text-anchor="none"
+                  style="mix-blend-mode: normal"
+                >
+                  <g transform="scale(5.12,5.12)">
+                    <path
+                      d="M21,3c-9.37891,0 -17,7.62109 -17,17c0,9.37891 7.62109,17 17,17c3.71094,0 7.14063,-1.19531 9.9375,-3.21875l13.15625,13.125l2.8125,-2.8125l-13,-13.03125c2.55469,-2.97656 4.09375,-6.83984 4.09375,-11.0625c0,-9.37891 -7.62109,-17 -17,-17zM21,5c8.29688,0 15,6.70313 15,15c0,8.29688 -6.70312,15 -15,15c-8.29687,0 -15,-6.70312 -15,-15c0,-8.29687 6.70313,-15 15,-15z"
+                    ></path>
+                  </g>
+                </g>
+              </svg>
+            </button>
+          </form>
+        </search>
+      </nav>
+      <nav id="sub-nav">
+        <ul>
+          <li><a href="#" aria-current="page">ATV</a></li>
+          <li><a href="#" aria-current="page">Motorbike</a></li>
+          <li><a href="#" aria-current="page">E-Bike</a></li>
+          <li><a href="#" aria-current="page">Scooter</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <aside>
+        <button
+          id="filters-button"
+          popovertarget="filters"
+          popovertargetaction="toggle"
+        >
+          Filters
+        </button>
+        <section id="filters" popover>
+          <h1>Filters</h1>
+          <form action="">
+            <div class="input-field">
+              <h2>Price</h2>
+              <div class="min-max-price">
+                <input
+                  type="number"
+                  min="0"
+                  placeholder="Min price"
+                  name="min-price"
+                  aria-label="Min price"
+                />
+                <input
+                  type="number"
+                  min="0"
+                  placeholder="Max price"
+                  name="max-price"
+                  aria-label="Max price"
+                />
+              </div>
+            </div>
+            <div class="input-field">
+              <h2>Delivery method</h2>
+              <input
+                type="radio"
+                id="delivery1"
+                name="delivery"
+                value="pickup"
+              />
+              <label for="delivery1">Local pickup</label><br />
+              <input
+                type="radio"
+                id="delivery2"
+                name="delivery"
+                value="shipping"
+              />
+              <label for="delivery2">Shipping</label>
+            </div>
+            <div class="input-field">
+              <h2>Condition</h2>
+              <input
+                type="radio"
+                id="conditions1"
+                name="condition"
+                value="new"
+              />
+              <label for="conditions1">New</label><br />
+              <input
+                type="radio"
+                id="conditions2"
+                name="condition"
+                value="used"
+              />
+              <label for="conditions2">Used</label>
+            </div>
+          </form>
+        </section>
+      </aside>
+      <article>
+        <h1>What’s Popular</h1>
+        <ul class="product-list">
+          <li title="This is a product description">
+            <a href="#">
+              <div class="product-list__img">
+                <img src="../images/thunderblade.png" alt="" />
+              </div>
+              <div class="product-list__content">
+                <h2>$7,999</h2>
+                <p>ThunderBlade XT</p>
+              </div>
+            </a>
+          </li>
+          <li title="This is a product description">
+            <a href="#">
+              <div class="product-list__img">
+                <img src="../images/savagerider.png" alt="" />
+              </div>
+              <div class="product-list__content">
+                <h2>$6,499</h2>
+                <p>SavageRider XR</p>
+              </div>
+            </a>
+          </li>
+          <li title="This is a product description">
+            <a href="#">
+              <div class="product-list__img">
+                <img src="../images/trailblazer.png" alt="" />
+              </div>
+              <div class="product-list__content">
+                <h2>$8,799</h2>
+                <p>Trailblazer XE</p>
+              </div>
+            </a>
+          </li>
+          <li title="This is a product description">
+            <a href="#">
+              <div class="product-list__img">
+                <img src="../images/wildhawk.png" alt="" />
+              </div>
+              <div class="product-list__content">
+                <h2>$5,999</h2>
+                <p>WildHawk XC</p>
+              </div>
+            </a>
+          </li>
+          <li title="This is a product description">
+            <a href="#">
+              <div class="product-list__img">
+                <img src="../images/blazerunner.png" alt="" />
+              </div>
+              <div class="product-list__content">
+                <h2>$9,299</h2>
+                <p>BlazeRunner XL</p>
+              </div>
+            </a>
+          </li>
+          <li title="This is a product description">
+            <a href="#">
+              <div class="product-list__img">
+                <img src="../images/apextrek.png" alt="" />
+              </div>
+              <div class="product-list__content">
+                <h2>$7,199</h2>
+                <p>ApexTrek XTR</p>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </article>
+    </main>
+  </body>
+</html>
